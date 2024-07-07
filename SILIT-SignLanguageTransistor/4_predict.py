@@ -5,10 +5,10 @@ import mediapipe as mp
 import pickle
 
 # Load the trained model
-model = load_model('2/gesture_model.h5')
+model = load_model('gesture_model.h5')
 
 # Load class indices
-with open('2/class_indices.pkl', 'rb') as f:
+with open('class_indices.pkl', 'rb') as f:
     class_indices = pickle.load(f)
 labels = list(class_indices.keys())
 
