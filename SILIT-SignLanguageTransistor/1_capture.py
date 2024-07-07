@@ -4,7 +4,7 @@ import mediapipe as mp
 
 # Directory to save images
 gesture_name = "T"  # Change this to the name of the gesture
-save_dir = f"2/dataset/{gesture_name}"
+save_dir = f"dataset/{gesture_name}"
 
 if not os.path.exists(save_dir):
     os.makedirs(save_dir)
