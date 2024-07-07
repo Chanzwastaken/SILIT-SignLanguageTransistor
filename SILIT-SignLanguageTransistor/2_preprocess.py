@@ -58,8 +58,8 @@ def preprocess_image(image_path, target_size=(224, 224)):
     return None
 
 # Example usage: Iterate through the dataset directory and preprocess images
-dataset_dir = '2/dataset'
-processed_dir = '2/processed_dataset'
+dataset_dir = 'dataset'
+processed_dir = 'processed_dataset'
 
 # Create processed directory if not exists
 if not os.path.exists(processed_dir):
