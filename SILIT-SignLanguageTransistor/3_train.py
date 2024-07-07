@@ -11,20 +11,20 @@ img_size = 224  # Update to match the bounding box size in capture.py
 # Prepare the dataset
 data_gen = ImageDataGenerator(rescale=1./255, validation_split=0.2)
 
-train_gen = data_gen.flow_from_directory('2/dataset',
+train_gen = data_gen.flow_from_directory('dataset',
                                          target_size=(img_size, img_size),
                                          batch_size=32,
                                          class_mode='categorical',
                                          subset='training')
 
-val_gen = data_gen.flow_from_directory('2/dataset',
+val_gen = data_gen.flow_from_directory('dataset',
                                        target_size=(img_size, img_size),
                                        batch_size=32,
                                        class_mode='categorical',
                                        subset='validation')
 
 # Save class indices
-with open('2/class_indices.pkl', 'wb') as f:
+with open('class_indices.pkl', 'wb') as f:
     pickle.dump(train_gen.class_indices, f)
 
 # Build the model
@@ -45,7 +45,7 @@ model.summary()
 history = model.fit(train_gen, validation_data=val_gen, epochs=20)  # Increase epochs
 
 # Save the model
-model.save('2/gesture_model.h5')
+model.save('gesture_model.h5')
 
 # Plot training history
 plt.plot(history.history['accuracy'], label='accuracy')
