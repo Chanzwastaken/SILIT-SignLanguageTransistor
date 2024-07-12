@@ -28,7 +28,7 @@ SILIT serves several important purposes:
 ## How to use
 1. Install required libraries
 ```
-pip install opencv-python opencv-python-headless mediapipe tensorflow matplotlib numpy
+pip install opencv-python opencv-python-headless mediapipe tensorflow matplotlib numpy streamlit
 ```
 2. Create dataset by run ```1_capture.py```. Don't forget to change name of the gesture and how many image that you want to capture. And it'll be saved in a folder named ```/dataset```
 3. Run ```2_preprocess.py``` to preprocess the data
