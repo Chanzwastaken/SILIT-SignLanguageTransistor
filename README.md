@@ -1,4 +1,4 @@
-# SILIT
+# SILIT - Sign Language Transistor
 **SILIT** is an innovative tool designed to convert sign language communication into written or spoken language. Utilizing advanced computer vision techniques, SILIT recognizes and tracks the movement of hands, fingers, and other relevant features in real-time video feeds.
 
 ## Tools Used
